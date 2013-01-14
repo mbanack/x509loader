@@ -4,7 +4,10 @@ x509loader
 Test go library loading of clientAuth SSL certs
 
 tls.LoadX509KeyPair succeeds for a regular cert, but fails for one created with openssl option 'addtrust clientAuth'
+
 x509.ParseCertificate also succeeds for a regular cert, but fails for one created with openssl option 'addtrust clientAuth'
+
+
 
 Certs generated with the following:
 <pre>
