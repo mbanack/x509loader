@@ -4,7 +4,6 @@ import (
         "fmt"
         "crypto/tls"
         "crypto/x509"
-        "encoding/asn1"
         "encoding/pem"
         "io"
 )
