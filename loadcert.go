@@ -12,16 +12,19 @@ func tryX509Parse(crtFile string) {
         fmt.Println(">> tryX509Parse",crtFile)
         fi, err := os.Open(crtFile)
         if err != nil {
-                panic("Error opening " + crtFile)
+                fmt.Println("Error opening " + crtFile)
+                return
         }
         pemBytes := make([]byte, 1024)
         n, err := fi.Read(pemBytes)
         if n >= 1024 {
-                panic("cert bigger than buffer")
+                fmt.Println("cert bigger than buffer")
+                return
         }
         if err != io.EOF && err != nil {
                 fmt.Println(err)
-                panic("non-EOF error in cert read")
+                fmt.Println("non-EOF error in cert read")
+                return
         }
 
         block, pemrest := pem.Decode(pemBytes[:n])
