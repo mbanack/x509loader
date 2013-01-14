@@ -116,8 +116,8 @@ func main() {
         tryTLSParse("client.clientAuth.crt", "client.key");
         tryX509Parse("client.crt");
         tryX509Parse("client.clientAuth.crt");
-        tryASN1UnmarshalToX509("client.crt");
-        tryASN1UnmarshalToX509("client.clientAuth.crt");
-        tryASN1UnmarshalToTLS("client.crt");
-        tryASN1UnmarshalToTLS("client.clientAuth.crt");
+        //tryASN1UnmarshalToX509("client.crt");
+        //tryASN1UnmarshalToX509("client.clientAuth.crt");
+        //tryASN1UnmarshalToTLS("client.crt");
+        //tryASN1UnmarshalToTLS("client.clientAuth.crt");
 }
